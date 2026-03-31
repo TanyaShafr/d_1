@@ -19,8 +19,8 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif}
 #stars{position:fixed;inset:0;z-index:0;pointer-events:none}
 .star{position:absolute;border-radius:50%;background:#fff;animation:tw linear infinite}
 @keyframes tw{0%,100%{opacity:.1}50%{opacity:.9}}
-#app{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;max-width:700px;margin:0 auto}
-.screen{display:none;flex:1;flex-direction:column;overflow:hidden}.screen.active{display:flex}
+#app{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;max-width:700px;margin:0 auto;overflow:hidden}
+.screen{display:none;flex:1;flex-direction:column;overflow:hidden;min-height:0}.screen.active{display:flex}
 
 /* INTRO */
 #s-intro{align-items:center;justify-content:center;text-align:center;gap:12px;padding:20px}
@@ -47,7 +47,7 @@ body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif}
 .wl{width:30px;height:34px;border-radius:6px;background:rgba(56,189,248,.05);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-size:14px;font-weight:900;color:transparent;transition:all .4s}
 .wl.on{color:var(--green);border-color:var(--green);background:rgba(52,211,153,.12);box-shadow:0 0 10px rgba(52,211,153,.3);animation:pop .4s cubic-bezier(.34,1.56,.64,1)}
 @keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
-.scroll{flex:1;overflow-y:auto;padding:0 14px 14px}.scroll::-webkit-scrollbar{width:3px}.scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 14px 14px;min-height:0;touch-action:pan-y}.scroll::-webkit-scrollbar{width:3px}.scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
 .chshell{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);margin-top:6px}
 .chhead{background:linear-gradient(135deg,rgba(14,165,233,.18),rgba(56,189,248,.05));padding:12px 14px 10px}
 .chn{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;color:var(--muted);margin-bottom:2px}
